@@ -1,116 +1,172 @@
-.qtyBtn {
+.bigContainer {
+  width: 100%;
   display: flex;
-  width: 120px;
-  justify-content: space-between;
-  margin: 10px;
-}
-.itemDiv {
-  display: flex;
-  flex-direction: row;
-  margin: 8px;
-  padding: 5px 10px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  background-image: url(./background.jpg);
+  padding-bottom: 2%;
 }
 
-.ingredientBtns {
-  border: 4px white solid;
-  border-radius: 15px;
-  padding: 15px 0;
+.bigTitle {
+  width: 100%;
+  padding: 2% 0 4% 0;
+  display: flex;
+  justify-content: center;
+  font-size: 36pt;
+  font-weight: bolder;
+  color: #ffa826;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  font-family: Avenir;
+  color: white;
+  padding-bottom: 2%;
+}
+
+.buttonSection {
+  width: 45%;
+  text-align: center;
+}
+
+.title {
+  color: #ffa826;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  padding-bottom: 2%;
+}
+
+.allIngredientsContainer {
+  all: unset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredientContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 4px 1px 7px 2px rgba(0, 0, 0, 0.5) inset;
+  color: black;
+  padding: 1%;
+  margin: 1%;
+}
+
+.ingredientName {
+  width: 40%;
+  font-weight: bold;
+  font-size: 14pt;
 }
 
 .btn {
+  width: 35%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
-  border: 1px white solid;
-
-  overflow: hidden;
+  border-radius: 40px;
+  border: #c6c6c6 0.5px solid;
+  padding: 0.5%;
 }
 
-.cmImg {
-  border: 4px white solid;
+.ingredientButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0;
+  width: 33px;
+  height: 33px;
+  border-radius: 8px;
+  font-size: 12pt;
+  background-color: unset;
+  color: #ffa826;
+  font-size: 20pt;
+}
+
+.ingredientButton:hover {
+  background-color: #ebebeb;
+  border-radius: 40px;
+}
+
+.ingredientButton:active {
+  background-color: #c6c6c6;
+  border-radius: 40px;
+}
+
+.atcBtnContainer {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summitButton {
+  width: 300px;
+  margin: 20px;
   border-radius: 15px;
-  height: 100%;
+  box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.15);
+  border: 0px;
+  font-size: 12pt;
+  height: 33.6px;
+  background-color: #ffa826;
+}
+
+.cmDiv {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.totalCost {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+.costNum {
+  font-size: 24pt;
+  font-weight: bold;
+  color: #ffa826;
 }
 
 .index {
   padding: 0 10px;
 }
 
-.totalCost {
-  padding: 5px;
-}
-
-.title {
-  color: #ffa826;
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 2px;
-  text-shadow: 0 0 3px black, 0 0 5px black;
-  border: 4px white solid;
-  border-radius: 15px;
-  margin: 20px 0px;
-}
-
-ul,
-ol {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-}
-.ingredientButton {
-  background-color: #ffa826;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-}
-.summitButton {
-  background-color: #ffa826;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-  box-shadow: inset 0 0 5px white;
-  border: white 2px solid;
-  width: 35%;
-  height: 25px;
-}
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: #055154 solid 2px;
-  width: 100%;
-  height: 100%;
-  background-image: url(./black-wall-texture.jpg);
-  font-size: 20px;
-  font-family: Avenir;
-  color: whitesmoke;
-}
-.buttonSection {
-  width: 45%;
-  height: 100%;
-  text-align: center;
-  margin: 10px;
-}
 .cmTitile {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cmDiv {
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}
+
 .burger {
+  width: 100%;
+  height: 550px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column-reverse;
 }
 .burgertop {
