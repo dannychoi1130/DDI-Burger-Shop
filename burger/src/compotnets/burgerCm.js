@@ -21,7 +21,6 @@ function BurgerCm() {
   });
   const { addToCart } = useContext(CartContext);
   const [image, setImage] = useState("");
-  const [buttonClicked, setButtonClicked] = useState(false);
 
   useEffect(() => {
     htmlToImageConvert();
@@ -44,19 +43,21 @@ function BurgerCm() {
   };
 
   const ingredients = [
+    "Cheese",
     "Shrimp-Cake",
     "Grilled-Chicken",
     "Teriyaki-chicken",
     "Filet-O-Fish",
     "Patties",
     "Mushroom",
-    "Cheese",
     "Lettuce",
     "Tomato",
+    "Onion",
+    "Avocado",
   ];
   const elementRef = useRef(null);
 
-  const prices = [12, 15, 15, 15, 15, 8, 8, 8, 8];
+  const prices = [8, 15, 15, 15, 15, 8, 8, 8, 8, 8, 8];
   const [totalCost, setTotalCost] = useState(0);
   const [index, setIndex] = useState(Array(ingredients.length).fill(0));
   const [updatedIndex, setupdatedIndex] = useState([]);
@@ -209,9 +210,7 @@ function BurgerCm() {
                         marginTop: `-40px`,
                         position: `relative`,
                       }}
-                    >
-                      <p className={classes[`ingredient-text`]}>{ingredient}</p>
-                    </div>
+                    ></div>
                   );
                 }
                 return ingredientDivs;
