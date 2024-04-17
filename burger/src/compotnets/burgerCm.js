@@ -186,9 +186,7 @@ function BurgerCm() {
                       marginTop: `-40px`,
                       position: `relative`,
                     }}
-                  >
-                    <p className={classes[`ingredient-text`]}>{ingredient}</p>
-                  </div>
+                  ></div>
                 );
               }
               return ingredientDivs;
