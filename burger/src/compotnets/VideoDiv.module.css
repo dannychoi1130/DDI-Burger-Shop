@@ -1,41 +1,53 @@
 .videoDiv {
+  height: 100%;
   width: 100%;
-  height: auto;
-  background-image: url(./black-wall-texture.jpg);
-}
-.videoBg {
-  height: auto;
-  width: 100%;
-}
-
-.content {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+}
+.videoBg {
+  height: 100%;
+  width: 100%;
+  aspectratio: auto;
+}
+.contextDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderBtn {
+  width: 180px;
+  height: 50px;
   background-color: #ffa826;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 18vh;
 }
 
 .sloganDiv {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-size: 80px;
+  color: #ffa826;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  margin-top: 10vh;
+}
+.descriptionDiv {
+  color: #ffa826;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-shadow: 0 0 3px black, 0 0 5px black;
 }

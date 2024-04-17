@@ -5,13 +5,16 @@
   position: sticky;
   top: 0px;
   background-color: white;
-  z-index: 10;
+  z-index: 9999;
   height: 70px;
+  border-bottom: black 1px solid;
+  width: 100%;
 }
 .leftNavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: fit-content;
 }
 .rightNavBar {
   display: flex;
@@ -21,12 +24,23 @@
   margin: 5px;
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
+  border-radius: 5px;
+}
+
+.imgDiv:active {
+  background-color: #fdc878;
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar {
   display: flex;
@@ -34,23 +48,44 @@
 
 .onlineorderbutton {
   margin: 5px;
+  cursor: pointer;
 }
 
-.aboutbutton {
+.textButton {
   margin: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
 .shop {
   width: 15px;
   height: 15px;
   margin: 5px;
+  cursor: pointer;
 }
 
 .stafftbutton {
   margin: 5px;
   padding: px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
 }
-p {
-  font-size: 15px;
-  font-family: prototype;
+
+.cartNum {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 15px;
+  height: 15px;
+  background-color: #ffa826;
+}
+
+a {
+  text-decoration: none;
 }
