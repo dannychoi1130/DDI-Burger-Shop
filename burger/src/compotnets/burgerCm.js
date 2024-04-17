@@ -21,7 +21,6 @@ function BurgerCm() {
   });
   const { addToCart } = useContext(CartContext);
   const [image, setImage] = useState("");
-  const [buttonClicked, setButtonClicked] = useState(false);
 
   useEffect(() => {
     htmlToImageConvert();
@@ -44,19 +43,21 @@ function BurgerCm() {
   };
 
   const ingredients = [
+    "Cheese",
     "Shrimp-Cake",
     "Grilled-Chicken",
     "Teriyaki-chicken",
     "Filet-O-Fish",
     "Patties",
     "Mushroom",
-    "Cheese",
     "Lettuce",
     "Tomato",
+    "Onion",
+    "Avocado",
   ];
   const elementRef = useRef(null);
 
-  const prices = [12, 15, 15, 15, 15, 8, 8, 8, 8];
+  const prices = [8, 15, 15, 15, 15, 8, 8, 8, 8, 8, 8];
   const [totalCost, setTotalCost] = useState(0);
   const [index, setIndex] = useState(Array(ingredients.length).fill(0));
   const [updatedIndex, setupdatedIndex] = useState([]);
@@ -167,6 +168,36 @@ function BurgerCm() {
         </div>{" "}
         {/*modify*/}
         <div className={classes.cmDiv}>
+          <p className={classes.title}>Customization</p>
+          <div className={classes.cmImg}>
+            {/*modify*/}
+            <p className={classes.totalCost}>
+              {/*modify*/}Total Cost: ${totalCost.toFixed(2)}
+            </p>
+            <div className={classes.burger} ref={elementRef}>
+              <div className={classes.burgerbottom}>
+                <div className={classes.btext}></div>
+              </div>
+              {ingredients.map((ingredient, i) => {
+                const count = index[i];
+                const ingredientDivs = [];
+
+                for (let j = 0; j < count; j++) {
+                  ingredientDivs.push(
+                    <div
+                      key={`${ingredient}-${j}`}
+                      className={classes[`${ingredient}`]}
+                      style={{
+                        marginTop: `-40px`,
+                        position: `relative`,
+                      }}
+                    ></div>
+                  );
+                }
+                return ingredientDivs;
+              })}
+
+              <div className={classes.burgertop}></div>
           {/*modify*/}
 
           <div className={classes.burger} ref={elementRef}>

@@ -246,13 +246,14 @@
 
 .Cheese {
   width: 220px;
-  height: 40px;
+  height: 60px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("cheese.png");
+  background-image: url("cheese.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  border-radius: 200px;
 }
 
 .Lettuce {
@@ -267,7 +268,32 @@
   /* top: -30px;
   bottom: -10px; Adjust this value to control the amount of overlap */
 }
-
+.Avocado {
+  width: 220px;
+  height: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("avocado.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 500px;
+  /* top: -30px;
+  bottom: -10px; Adjust this value to control the amount of overlap */
+}
+.Onion {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("onion.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 500px;
+  /* top: -30px;
+  bottom: -10px; Adjust this value to control the amount of overlap */
+}
 .Tomato {
   width: 220px;
   height: 60px;
