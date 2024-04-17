@@ -304,7 +304,7 @@ function CreditcardForm({
     "Backspace",
   ];
   return (
-    <div className={styles.editContainer}>
+    <div className={styles.creditcardContainer}>
       <div className={styles.inputContainer}>
         Name
         <input
@@ -479,13 +479,8 @@ function FinishPage({ orderNum }) {
       });
   };
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <div ref={elementRef}>
+    <div className={styles.finisgPageContainer}>
+      <div className={styles.htmlToImgContainer} ref={elementRef}>
         <div className={styles.finishOrderContainer}>
           <div className={styles.finishMsg}> Your Order Number is:</div>
           <div className={styles.orderNum}>#{orderNum}</div>
@@ -494,7 +489,9 @@ function FinishPage({ orderNum }) {
           </div>
         </div>
       </div>
-      <button onClick={htmlToImageConvert}>download your receipt</button>
+      <button className={styles.receiptBtn} onClick={htmlToImageConvert}>
+        download your receipt
+      </button>
     </div>
   );
 }

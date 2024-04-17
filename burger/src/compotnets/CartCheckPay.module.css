@@ -291,6 +291,19 @@ tbody.itemContainer {
   margin-left: 5%;
 }
 
+.creditcardContainer {
+  display: flex;
+  width: 85%;
+  background-color: white;
+  padding: 3%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px 5px rgba(0, 0, 0, 0.15);
+}
+
 .inputContainer {
   display: flex;
   flex-direction: column;
@@ -380,10 +393,27 @@ input.radio {
 .divToShow {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .paypal {
   width: 200px;
+}
+
+.finisgPageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.htmlToImgContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .finishOrderContainer {
@@ -417,7 +447,7 @@ input.radio {
   border: 0px;
   font-size: 12pt;
   height: 33.6px;
-  width: 80%;
+  width: 240px;
   background-color: #ffa826;
 }
 
@@ -514,6 +544,10 @@ input.radio {
     background-color: #fac575;
   }
 
+  .creditcardContainer {
+    margin: unset;
+  }
+
   .rightContainer {
     height: unset;
     padding: unset;
@@ -535,5 +569,9 @@ input.radio {
     width: 32px;
     height: 32px;
     margin-right: 20px;
+  }
+
+  .receiptBtn {
+    width: 80%;
   }
 }
