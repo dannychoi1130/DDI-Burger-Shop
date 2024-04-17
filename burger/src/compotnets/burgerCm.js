@@ -123,106 +123,98 @@ function BurgerCm() {
 
   return (
     <div className={classes.bigContainer}>
+      <div className={classes.bigTitle}>Customization</div>
       <div className={classes.wrapper}>
         <div className={classes.buttonSection}>
-          <p className={classes.title}>Ingredient</p>
-          <div className={classes.ingredientBtns}>
-            <ul>
-              {" "}
-              {/*modify*/}
-              {ingredients.map((ingredient, i) => (
-                <li key={i}>
-                  <div className={classes.itemDiv}>
-                    {ingredient} :
-                    <div className={classes.btn}>
-                      {/*modify*/}
-                      <button
-                        className={classes.ingredientButton}
-                        onClick={() => {
-                          DelIngredients(i);
-                        }}
-                      >
-                        -
-                      </button>
-                      <div className={classes.index}>
-                        {/*modify*/}
-                        {index[i]}
-                      </div>
-                      <button
-                        className={classes.ingredientButton}
-                        onClick={() => {
-                          AddIngredients(i);
-                        }}
-                      >
-                        {" "}
-                        +{" "}
-                      </button>
-                    </div>
-                    {/*modify*/}
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className={classes.title}>Ingredient</div>
+          <ul className={classes.allIngredientsContainer}>
+            {" "}
+            {/*modify*/}
+            {ingredients.map((ingredient, i) => (
+              <li className={classes.ingredientContainer} key={i}>
+                <div className={classes.ingredientName}>{ingredient} :</div>
+                <div className={classes.btn}>
+                  {/*modify*/}
 
-            {!link ? (
-              <button
-                className={classes.summitButton}
-                onClick={handelingSummit}
-              >
-                add to cart
-              </button>
-            ) : (
-              <Link to="/online-order">
-                <button
-                  className={classes.summitButton}
-                  onClick={handelingSummit}
-                >
-                  add to cart
-                </button>
-                /
-              </Link>
-            )}
-          </div>
+                  <button
+                    className={classes.ingredientButton}
+                    onClick={() => {
+                      DelIngredients(i);
+                    }}
+                  >
+                    -
+                  </button>
+
+                  <div className={classes.index}>
+                    {/*modify*/}
+                    {index[i]}
+                  </div>
+
+                  <button
+                    className={classes.ingredientButton}
+                    onClick={() => {
+                      AddIngredients(i);
+                    }}
+                  >
+                    {" "}
+                    +{" "}
+                  </button>
+                </div>
+                {/*modify*/}
+              </li>
+            ))}
+          </ul>
         </div>{" "}
         {/*modify*/}
         <div className={classes.cmDiv}>
-          <p className={classes.title}>Customization</p>
-          <div className={classes.cmImg}>
-            {/*modify*/}
-            <p className={classes.totalCost}>
-              {/*modify*/}Total Cost: ${totalCost.toFixed(2)}
-            </p>
-            <div className={classes.burger} ref={elementRef}>
-              <div className={classes.burgerbottom}>
-                <div className={classes.btext}></div>
-              </div>
-              {ingredients.map((ingredient, i) => {
-                const count = index[i];
-                const ingredientDivs = [];
+          {/*modify*/}
 
-                for (let j = 0; j < count; j++) {
-                  ingredientDivs.push(
-                    <div
-                      key={`${ingredient}-${j}`}
-                      className={classes[`${ingredient}`]}
-                      style={{
-                        marginTop: `-40px`,
-                        position: `relative`,
-                      }}
-                    >
-                      <p className={classes[`ingredient-text`]}>{ingredient}</p>
-                    </div>
-                  );
-                }
-                return ingredientDivs;
-              })}
-
-              <div className={classes.burgertop}></div>
+          <div className={classes.burger} ref={elementRef}>
+            <div className={classes.burgerbottom}>
+              <div className={classes.btext}></div>
             </div>
+            {ingredients.map((ingredient, i) => {
+              const count = index[i];
+              const ingredientDivs = [];
+
+              for (let j = 0; j < count; j++) {
+                ingredientDivs.push(
+                  <div
+                    key={`${ingredient}-${j}`}
+                    className={classes[`${ingredient}`]}
+                    style={{
+                      marginTop: `-40px`,
+                      position: `relative`,
+                    }}
+                  >
+                    <p className={classes[`ingredient-text`]}>{ingredient}</p>
+                  </div>
+                );
+              }
+              return ingredientDivs;
+            })}
+
+            <div className={classes.burgertop}></div>
           </div>
+          <p className={classes.totalCost}>
+            {/*modify*/}Total Cost: ${" "}
+            <div className={classes.costNum}>{totalCost.toFixed(2)}</div>
+          </p>
           {/*modify*/}
         </div>
       </div>
+
+      {!link ? (
+        <button className={classes.summitButton} onClick={handelingSummit}>
+          Add to cart
+        </button>
+      ) : (
+        <Link className={classes.atcBtnContainer} to="/online-order">
+          <button className={classes.summitButton} onClick={handelingSummit}>
+            Add to cart
+          </button>
+        </Link>
+      )}
     </div>
   );
 }
