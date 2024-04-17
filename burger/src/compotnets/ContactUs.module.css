@@ -80,15 +80,15 @@
   border: 0px;
   font-size: 12pt;
   height: 33.6px;
-  width: 80px;
+  width: 200px;
   background-color: #ffa826;
-  align-self: flex-end;
+  align-self: center;
 }
 
 @media only screen and (max-width: 800px) {
   .container {
     flex-direction: row;
-    height: 600px;
+    height: unset;
   }
   .left-container {
     width: 100%;
