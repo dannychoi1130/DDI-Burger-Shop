@@ -17,10 +17,10 @@ function AboutUs() {
     <div className={styles.abtContainer} ref={aboutRef}>
       <div className={styles.abtSubContainer}>
         <div className={styles.abtContent}>
-          <h1 className={styles.heading} data-aos="fade-right">
+          <h1 className={styles.heading} data-aos="fade-down">
             About Us
           </h1>
-          <div className={styles.aWording} data-aos="fade-left">
+          <div className={styles.aWording} data-aos="fade-down">
             Danny, Dan and Isaac are burgerholic. They always find and eat
             burger in worldwide. They want to share the best taste of burger
             with Hong Kong People. Therefore, they established DDI in 2024.
@@ -65,7 +65,7 @@ function OurProduct() {
         </div>
 
         <div className={styles.opSubSubContainer}>
-          <div className={styles.opBContent} data-aos="fade-up-right">
+          <div className={styles.opBContent} data-aos="fade-up">
             <h2 className={styles.subtitle}>Every burgers are CERTIFIED</h2>
             <div className={styles.bWording}>
               A burger lovers ourselves, we take our craft seriously - and it
@@ -83,7 +83,7 @@ function OurProduct() {
             </div>
           </div>
 
-          <div className={styles.opBContent} data-aos="fade-up-right">
+          <div className={styles.opBContent} data-aos="fade-up">
             <h2 className={styles.subtitle}>What is a smashburger?</h2>
             <div className={styles.bWording}>
               To us, burgers are something special. We're obsessed with making
@@ -102,7 +102,7 @@ function OurProduct() {
             </div>
           </div>
 
-          <div className={styles.opBContent} data-aos="fade-up-right">
+          <div className={styles.opBContent} data-aos="fade-up">
             <h2 className={styles.subtitle}>Gluten-Free</h2>
             If you or a friend or family member that you're dining with has a
             gluten sensitivity, consider trying one of these tasty, gluten-free
@@ -123,7 +123,7 @@ function OurProduct() {
 function OurLocation() {
   return (
     <div className={styles.locateContainer}>
-      <div className={styles.locateLeftContainer} data-aos="zoom-out">
+      <div className={styles.locateLeftContainer}>
         <div id={styles.locateHead}>Our Location</div>
         <div className={styles.locateContent}>
           G/F 69 Cooke Street HUNG HOM KOWLOON
