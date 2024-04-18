@@ -308,7 +308,7 @@ function CreditcardForm({
       <div className={styles.inputContainer}>
         Name
         <input
-          onChange={(e) => handleInputChange(e, setCardName)}
+          onChange={(e) => handleInputChange(e, setCardName, 1)}
           className={styles.cardname}
           placeholder="Name on card"
           required
