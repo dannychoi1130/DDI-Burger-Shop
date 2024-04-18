@@ -68,10 +68,6 @@ function Menu({ tabletSize }) {
   }
 
   function MenuCard() {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-
     return (
       <div className={styles.container}>
         <div className={styles.title}>MENU</div>

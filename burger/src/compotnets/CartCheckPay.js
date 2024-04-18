@@ -14,7 +14,7 @@ function CartPage() {
   const { currency } = useContext(CartContext);
   const { currencyRate } = useContext(CartContext);
   const { setCart } = useContext(CartContext);
-
+  console.log(window.innerWidth);
   const deleteItem = (e) => {
     if (window.confirm("Are you sure you wish to delete this item?")) {
       const CartAfterRemove = cart.filter((x) => x.id !== e);

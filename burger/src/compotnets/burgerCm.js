@@ -21,6 +21,8 @@ function BurgerCm() {
   });
   const { addToCart } = useContext(CartContext);
   const [image, setImage] = useState("");
+  const { currency } = useContext(CartContext);
+  const { currencyRate } = useContext(CartContext);
 
   useEffect(() => {
     htmlToImageConvert();
@@ -146,10 +148,7 @@ function BurgerCm() {
                     -
                   </button>
 
-                  <div className={classes.index}>
-                    {/*modify*/}
-                    {index[i]}
-                  </div>
+                  <div className={classes.index}>{index[i]}</div>
 
                   <button
                     className={classes.ingredientButton}
@@ -161,94 +160,56 @@ function BurgerCm() {
                     +{" "}
                   </button>
                 </div>
-                {/*modify*/}
               </li>
             ))}
           </ul>
-        </div>{" "}
-        {/*modify*/}
+        </div>
+
         <div className={classes.cmDiv}>
-          <p className={classes.title}>Customization</p>
-          <div className={classes.cmImg}>
-            {/*modify*/}
-            <p className={classes.totalCost}>
-              {/*modify*/}Total Cost: ${totalCost.toFixed(2)}
-            </p>
-            <div className={classes.burger} ref={elementRef}>
-              <div className={classes.burgerbottom}>
-                <div className={classes.btext}></div>
-              </div>
-              {ingredients.map((ingredient, i) => {
-                const count = index[i];
-                const ingredientDivs = [];
+          <div className={classes.burger} ref={elementRef}>
+            <div className={classes.burgerbottom}></div>
+            {ingredients.map((ingredient, i) => {
+              const count = index[i];
+              const ingredientDivs = [];
 
-                for (let j = 0; j < count; j++) {
-                  ingredientDivs.push(
-                    <div
-                      key={`${ingredient}-${j}`}
-                      className={classes[`${ingredient}`]}
-                      style={{
-                        marginTop: `-40px`,
-                        position: `relative`,
-                      }}
-                    ></div>
-                  );
-                }
-                return ingredientDivs;
-              })}
+              for (let j = 0; j < count; j++) {
+                ingredientDivs.push(
+                  <div
+                    key={`${ingredient}-${j}`}
+                    className={classes[`${ingredient}`]}
+                    style={{
+                      marginTop: `-40px`,
+                      position: `relative`,
+                    }}
+                  ></div>
+                );
+              }
+              return ingredientDivs;
+            })}
 
-              <div className={classes.burgertop}></div>
-              {/*modify*/}
-
-              <div className={classes.burger} ref={elementRef}>
-                <div className={classes.burgerbottom}>
-                  <div className={classes.btext}></div>
-                </div>
-                {ingredients.map((ingredient, i) => {
-                  const count = index[i];
-                  const ingredientDivs = [];
-
-                  for (let j = 0; j < count; j++) {
-                    ingredientDivs.push(
-                      <div
-                        key={`${ingredient}-${j}`}
-                        className={classes[`${ingredient}`]}
-                        style={{
-                          marginTop: `-40px`,
-                          position: `relative`,
-                        }}
-                      ></div>
-                    );
-                  }
-                  return ingredientDivs;
-                })}
-
-                <div className={classes.burgertop}></div>
-              </div>
-              <p className={classes.totalCost}>
-                {/*modify*/}Total Cost: ${" "}
-                <div className={classes.costNum}>{totalCost.toFixed(2)}</div>
-              </p>
-              {/*modify*/}
+            <div className={classes.burgertop}></div>
+          </div>
+          <div className={classes.totalCost}>
+            Total Cost:
+            <div className={classes.costNum}>
+              {currency === "HK$"
+                ? `${currency} ${(totalCost * currencyRate).toFixed(0)}`
+                : `${currency} ${(totalCost * currencyRate).toFixed(1)}`}
             </div>
           </div>
-
-          {!link ? (
-            <button className={classes.summitButton} onClick={handelingSummit}>
-              Add to cart
-            </button>
-          ) : (
-            <Link className={classes.atcBtnContainer} to="/online-order">
-              <button
-                className={classes.summitButton}
-                onClick={handelingSummit}
-              >
-                Add to cart
-              </button>
-            </Link>
-          )}
         </div>
       </div>
+      {!link ? (
+        <button className={classes.summitButton} onClick={handelingSummit}>
+          Add to cart
+        </button>
+      ) : (
+        <Link className={classes.atcBtnContainer} to="/online-order">
+          <button className={classes.summitButton} onClick={handelingSummit}>
+            Add to cart
+          </button>
+        </Link>
+      )}
     </div>
   );
 }
