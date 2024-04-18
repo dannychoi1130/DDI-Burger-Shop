@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
 }
 .videoBg {
   height: 100%;
@@ -51,4 +50,10 @@
   margin-top: auto;
   margin-bottom: auto;
   text-shadow: 0 0 3px black, 0 0 5px black;
+}
+
+@media screen and (max-width: 480px) {
+  .videoDiv {
+    margin-top: 70px;
+  }
 }

@@ -180,6 +180,9 @@ a {
 .listContainer {
   width: 100%;
   max-height: 80px;
+  top: 70px;
+  position: relative;
+  background-color: white;
 }
 
 .ul {
