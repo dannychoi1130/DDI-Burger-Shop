@@ -132,7 +132,7 @@ function ModifyBurger({ backBtn }) {
         </div>
         <div className={styles.price}>
           <div className={styles.priceName}>Price :&nbsp;</div>
-          {`${currency}${(burger.unitPrice * currencyRate).toFixed(1) * qty}`}
+          {`${currency}${(burger.unitPrice * currencyRate * qty).toFixed(1)}`}
         </div>
         <div
           className={styles.cart}

@@ -336,6 +336,7 @@ function CreditcardForm({
           placeholder="DD/YYYY"
           required
           value={cardDate}
+          type="date"
           minLength={6}
           maxLength={6}
           onKeyDown={(e) => {
