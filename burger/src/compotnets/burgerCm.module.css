@@ -320,6 +320,10 @@
   .ingredientName {
     font-size: 12pt;
   }
+
+  .totalCost {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -383,5 +387,6 @@
 
   .totalCost {
     width: 60%;
+    margin-top: 5%;
   }
 }

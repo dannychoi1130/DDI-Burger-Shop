@@ -8,7 +8,7 @@ function VideoDiv({ tabletSize }) {
         <video className={classes.videoBg} src={VideoBG} autoPlay loop muted />
         <div className={classes.contextDiv}>
           <div className={classes.sloganDiv}>
-            <p>
+            <p className={classes.bigTitle}>
               Build Your Burger
               <br />
               Your Way!
@@ -16,7 +16,7 @@ function VideoDiv({ tabletSize }) {
           </div>
           {!tabletSize && (
             <div className={classes.descriptionDiv}>
-              <p>
+              <p className={classes.description}>
                 Embark on a culinary adventure where the only limit is your
                 imagination. <br /> Get ready to indulge in the burger of your
                 dreams.
@@ -24,7 +24,7 @@ function VideoDiv({ tabletSize }) {
             </div>
           )}
           <Link to="/BurgerCm">
-            <button className={classes.orderBtn}> click me to start !!</button>
+            <button className={classes.orderBtn}> Click me to start !!</button>
           </Link>
         </div>
       </div>

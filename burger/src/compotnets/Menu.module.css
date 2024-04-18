@@ -269,8 +269,7 @@ a {
     height: auto;
     overflow: initial;
     max-height: unset;
-
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-self: center;
   }
 
