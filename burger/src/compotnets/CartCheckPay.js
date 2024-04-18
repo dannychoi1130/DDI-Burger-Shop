@@ -316,13 +316,13 @@ function CreditcardForm({
         ></input>
         Credit Card No.
         <input
-          onChange={(e) => handleInputChange(e, setCardNum)}
+          onChange={(e) => handleInputChange(e, setCardNum, 2)}
           className={styles.expdate}
           placeholder="0000 0000 0000 0000"
           required
           value={cardNum}
-          minLength={12}
-          maxLength={12}
+          minLength={19}
+          maxLength={19}
           onKeyDown={(e) => {
             if (!numVaildkey.includes(e.code)) {
               e.preventDefault();
@@ -638,6 +638,8 @@ function CartCheckPay() {
   const handleInputChange = (e, setter, type) => {
     if (type === 1) {
       setter(e.target.value.replace(/[^a-z]/gi, ""));
+    } else if (type === 2) {
+      setter(e.target.value.replace(/\s/g, "").replace(/(.{4})/g, "$1 "));
     } else {
       setter(e.target.value);
       console.log(e.target.maxLength);
