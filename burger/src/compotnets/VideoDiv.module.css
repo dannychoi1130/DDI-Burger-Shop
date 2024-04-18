@@ -76,3 +76,9 @@
     font-size: 22pt;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .videoDiv {
+    margin-top: 70px;
+  }
+}
