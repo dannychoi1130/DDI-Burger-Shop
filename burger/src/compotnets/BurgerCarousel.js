@@ -43,9 +43,9 @@ function BurgerCarousel() {
       keyBoardControl={true}
       customTransition="transform 700ms ease-in-out"
       transitionDuration={500}
-      containerClass="carousel-container"
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
+      containerClass={styles.carouselContainer}
+      dotListClass={styles.customDotListStyle}
+      itemClass={styles.carouselItemPadding40px}
       className={styles.carousel}
     >
       {food["Handmade Burger"].map(({ product, image, price }, i) => {

@@ -4,7 +4,7 @@
       rgba(0, 0, 0, 0.8) 0%,
       rgba(184, 115, 12, 0.6) 58%,
       rgba(0, 0, 0, 0.6) 86%,
-      rgba(0, 0, 0, 1) 100%
+      rgb(224, 59, 59) 100%
     ),
     url(./background.jpg);
   text-align: center;
@@ -50,7 +50,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 431px) {
+@media screen and (max-width: 460px) {
   .carousel {
     padding: 20px 0px;
   }
@@ -58,5 +58,6 @@
   .burger {
     width: 200px;
     height: 175px;
+    overflow: ;
   }
 }

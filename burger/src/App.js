@@ -8,14 +8,14 @@ import BurgerCm from "./compotnets/burgerCm";
 import CartCheckPay from "./compotnets/CartCheckPay";
 import { CartProvider } from "./context/CartContext";
 import { useState, useEffect } from "react";
+import NavBarContainer from "./compotnets/NavBarContainer";
 import React from "react";
 
 function App() {
   const [tabletSize, setTabletSize] = useState(false);
-  const [mobileSize, setMobileSize] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
-      setMobileSize(window.innerWidth < 450 ? true : false);
       setTabletSize(window.innerWidth < 960 ? true : false);
     };
     console.log("window.innerWidth " + window.innerWidth);
@@ -32,7 +32,7 @@ function App() {
     <>
       <CartProvider>
         <Routes>
-          <Route path="/" element={mobileSize ? <NavBar3 /> : <NavBar />}>
+          <Route path="/" element={<NavBarContainer />}>
             <Route index element={<Home tabletSize={tabletSize} />} />
             <Route
               path="/online-order"
