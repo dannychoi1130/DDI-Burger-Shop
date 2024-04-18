@@ -175,6 +175,7 @@
 
 .locateContent {
   color: white;
+  padding-bottom: 3%;
 }
 
 iframe {
@@ -223,6 +224,10 @@ iframe {
     width: 33%;
   }
 
+  .opContainer {
+    padding-top: 2%;
+  }
+
   .opSubContainer {
     align-items: center;
     text-align: center;
@@ -250,11 +255,15 @@ iframe {
   .locateContainer {
     flex-direction: column;
     align-items: center;
+    padding-top: 0;
   }
 
   .locateLeftContainer {
     width: 100%;
     margin-bottom: 5%;
+    margin: unset;
+    padding: unset;
+    padding-bottom: 5%;
   }
 
   iframe {

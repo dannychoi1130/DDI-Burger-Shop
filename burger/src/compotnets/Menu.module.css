@@ -127,6 +127,7 @@
 }
 
 .product {
+  text-align: center;
   font-size: larger;
   font-weight: bold;
 }
@@ -264,11 +265,13 @@ a {
   }
 
   .foodCardContainer {
+    width: 90%;
     height: auto;
     overflow: initial;
     max-height: unset;
 
-    justify-content: center;
+    justify-content: flex-start;
+    align-self: center;
   }
 
   .titleWord {

@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
   const [currencyRate, setCurrencyRate] = useState(1);
   const [currency, setCurrency] = useState("HK$");
   const apiKey = process.env.REACT_APP_API_KEY;
+  console.log(apiKey);
   const [qty, setQty] = useState(1);
   const [orderNum, setOrderNum] = useState("0000");
   const [currentPage, setCurrentPage] = useState("cart");
@@ -29,6 +30,7 @@ export const CartProvider = ({ children }) => {
       );
       const data = await response.json();
       let result = data.conversion_rates.USD;
+      console.log(result);
       setCurrencyRate(result);
       setCurrency("US$");
     } catch (error) {
