@@ -1,6 +1,4 @@
 .container {
-  position: sticky;
-  top: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +48,9 @@
 
 .header {
   z-index: 10000;
+  position: fixed;
+  top: 0px;
+  background-color: white;
 }
 
 .list {
