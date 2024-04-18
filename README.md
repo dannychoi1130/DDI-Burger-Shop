@@ -12,6 +12,7 @@ Custom burger builder: Users can select from a variety of ingredients (buns, pat
 *  React Router: A routing library for React applications.
 *  HTML/CSS: Markup and styling for the web application.
 *  JavaScript: Handling user interactions and managing application state.
+*  currency API: fetching the currency for price
 
 ### Installation and Setup
 Installation and Setup<br>
