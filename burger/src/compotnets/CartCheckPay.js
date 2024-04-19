@@ -308,7 +308,7 @@ function CreditcardForm({
       <div className={styles.inputContainer}>
         Name
         <input
-          onChange={(e) => handleInputChange(e, setCardName)}
+          onChange={(e) => handleInputChange(e, setCardName, 1)}
           className={styles.cardname}
           placeholder="Name on card"
           required
@@ -316,13 +316,13 @@ function CreditcardForm({
         ></input>
         Credit Card No.
         <input
-          onChange={(e) => handleInputChange(e, setCardNum)}
+          onChange={(e) => handleInputChange(e, setCardNum, 2)}
           className={styles.expdate}
           placeholder="0000 0000 0000 0000"
           required
           value={cardNum}
-          minLength={12}
-          maxLength={12}
+          minLength={19}
+          maxLength={19}
           onKeyDown={(e) => {
             if (!numVaildkey.includes(e.code)) {
               e.preventDefault();
@@ -336,6 +336,7 @@ function CreditcardForm({
           placeholder="DD/YYYY"
           required
           value={cardDate}
+          type="date"
           minLength={6}
           maxLength={6}
           onKeyDown={(e) => {
@@ -637,6 +638,8 @@ function CartCheckPay() {
   const handleInputChange = (e, setter, type) => {
     if (type === 1) {
       setter(e.target.value.replace(/[^a-z]/gi, ""));
+    } else if (type === 2) {
+      setter(e.target.value.replace(/\s/g, "").replace(/(.{4})/g, "$1 "));
     } else {
       setter(e.target.value);
       console.log(e.target.maxLength);
